@@ -1,2 +1,3 @@
 # collab-demo-repo
-Github configuration for collaborative projects.
+This is a test with the README
+Hi!
