@@ -1,3 +1,3 @@
-# collab-demo-repo
+# Project One Collaboration README
 This is a test with the README
 Hi!
