@@ -26,7 +26,7 @@ function execute(x) {
                 localStorage.setItem("youtubeString", videoString);
               },
             function(err) { console.error("Execute error", err); });
-            
+
 }
 gapi.load("client");
 
@@ -34,13 +34,13 @@ gapi.load("client");
 // Shazam Search and information return //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// event listener on search button 
+// event listener on search button
 $("#sButton").click(function(e) {
   e.preventDefault();
   // pulls the value from the search bar
   var searchInfo = $("#default-search")[0].value;
   // clears the search bar
-  $("#default-search")[0].value = ""; 
+  $("#default-search")[0].value = "";
   // split the search text, and adds %20 where the spaces are,
   var searchInfoCon = searchInfo.split(" ").join("%20");
   // this is the shazam search url concatanated
@@ -58,7 +58,7 @@ $("#sButton").click(function(e) {
     }
   };
 
-  // returns the song title, the artist, and the snippit to a list item 
+  // returns the song title, the artist, and the snippit to a list item
   $.ajax(settings).done(function (response) {
     // for each search result, return the song, its artist, and a snippet of the lyrics if theyre avaliable
     for (i = 0; i < response.tracks.hits.length; i++) {
@@ -71,8 +71,8 @@ $("#sButton").click(function(e) {
       };
       // Charles add the class's here for the css framework
       // I'm aware of how ugly this is, but I cannot get it to work otherwise
-      $("#resultList").append('<li id="newPageLink" class=""><button class="buttonCheck"><h2 class="test">' + songTitle + ' by ' + artist + '</h2><p><i>' + songSnip + '</i></p></button></li>');
-    }; 
+      $("#resultList").append('<li id="newPageLink" class=""><button class="buttonCheck text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><h2 class="test">' + songTitle + ' by ' + artist + '</h2><p><i>' + songSnip + '</i></p></button></li>');
+    };
   });
 });
 
