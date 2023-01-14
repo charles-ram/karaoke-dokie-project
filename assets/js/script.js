@@ -60,6 +60,8 @@ $("#sButton").click(function(e) {
 
   // returns the song title, the artist, and the snippit to a list item 
   $.ajax(settings).done(function (response) {
+    // removes all previous search results
+    $("li").remove();
     // for each search result, return the song, its artist, and a snippet of the lyrics if theyre avaliable
     for (i = 0; i < response.tracks.hits.length; i++) {
       var songTitle = response.tracks.hits[i].track.title;
