@@ -73,7 +73,7 @@ $("#sButton").click(function(e) {
       };
       // Charles add the class's here for the css framework
       // I'm aware of how ugly this is, but I cannot get it to work otherwise
-      $("#resultList").append('<li id="newPageLink" class="block list-none"><button id="buttonCheck" class="m-3 text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-700 font-medium rounded-lg text-sm px-4 py-2 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"><h2 class="test"><b>' + songTitle + '</b><i> by </i>' + artist + '</h2></button></li>');
+      $("#resultList").append('<li id="newPageLink" class="block list-none"><button id="buttonCheck" class="m-3 text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-700 font-medium rounded-lg text-sm px-4 py-2 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"><h2 class="test"><b>' + songTitle + '</b><i> by </i><b>' + artist + '</b></h2></button></li>');
     };
   });
 });
