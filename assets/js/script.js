@@ -43,7 +43,7 @@ $("#sButton").click(function(e) {
   $("#default-search")[0].value = "";
   // removes all previous search results
   $("li").remove();
-  $("#resultList").append('<li class="flex items-center justify-center"><img class="px-8 py-2 w-1/6" src="./assets/images/Ajax_loader_metal_512.gif"></li>')
+  $("#resultList").append('<li class="flex items-center justify-center"><img class="w-36 h-36 p-4" src="./assets/images/LoadingIcon.gif"></li>')
   // split the search text, and adds %20 where the spaces are,
   var searchInfoCon = searchInfo.split(" ").join("%20");
   // this is the shazam search url concatanated
