@@ -24,10 +24,12 @@
 		</nav>
 	</header>
 
-	<div class="flex justify-center align-middle text-center items-center h-screen m-3">
+	<div class="flex justify-center align-middle text-center items-center h-screen m-6 mt-10">
 		<div class="max-w-fit bg-zinc-700 rounded-lg m-2" id="left-col">
+			<div class="w-full flex justify-end">
+				<button type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
+			</div>
 			<div class="p-6 bg-zinc-700 rounded-lg m-3" id="youtube-iframe">
-
 				<!-- There is some issue with local server and showing the youtube video, however the link and the embed are correct, its just freaking out -->
 				<!-- <iframe id="vid" width="640" height="385" src="" -->
 				<iframe class="w-full aspect-video mx-auto" id="vid" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -43,8 +45,6 @@
 			</div>
 		</div>
 	</div>
-
-	<button type="submit" id="addToSetlistButton" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
 
 	<footer class="relative bottom-0 left-0 right-0">
 		<div class="flex justify-center" id="social-links">
