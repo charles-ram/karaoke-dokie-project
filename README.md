@@ -15,15 +15,13 @@
 
 ## Usage
 
-[GitHub Pages, Deployed Project] https://charles-ram.github.io/karaoke-dokie-project/
-
 ### Screenshot
 
 <!--Screenshots of each page-->
 
 ## Credits
 
-[Tailwind CSS Documentation, used for CSS Framework] (https://tailwindcss.com/docs/installation)
+[Tailwind-CSS-Documentation](https://tailwindcss.com/docs/installation)
 
 
 <!--General Format, as above [Description of resource and how it was used](Resource Link)-->
@@ -32,3 +30,6 @@
 <!--APIs used-->
 
 <!--Be sure to keep track of reference material other than API, so that we can give credit. Better to over-cite than under-->
+## Links
+[GitHub-Repo](https://github.com/charles-ram/karaoke-dokie-project)
+[Active-Site](https://charles-ram.github.io/karaoke-dokie-project/)
