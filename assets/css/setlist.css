@@ -11,3 +11,13 @@ section {
     position: relative;
 	color: black
 }
+
+h2 {
+	color: black;
+	font-style: italic;
+}
+
+li {
+	color: black;
+	font-style: italic;
+}
