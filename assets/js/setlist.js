@@ -15,8 +15,8 @@ function addToSetList() {
     if (songEntry === null) {
         return;
     } else {
-        for (var i = 0; i < setList.length; i++) {
-           var songEntry = setList[i];
+        for (var i = 0; i <= 8; i++) {
+            var songEntry = setList[i];
         //creates an li 
         li.document.createElement("li");
         //sets the text of the li to "song info" pulled from local storage
@@ -40,11 +40,6 @@ function localparse() {
 function storeSongs() {
     localStorage.setItem("setList", JSON.stringify(setList));
 }
-//adds event listener for click of "Add to Set-List Button" to run addToSetList function
-addToSetlistButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    addToSetList()
-});
 
 localparse()
 }
