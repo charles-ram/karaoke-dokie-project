@@ -1,44 +1,45 @@
 //Creates functionality for button-click on youtube page adding song information to set-list page, maybe add function on search button that adds song info locally, to be retrieved by the "add song" button on youtube page
 
-//selects the span in the set-list ul to generate text populated from local storage
-var userSetListSongSpan = document.querySelector("#set-list-song")
+//variable for ul element selector
+var setListUl = document.getElementById("set-list")
+//variable for the locally-stored song info string
+var songEntry = localStorage.getItem("song info");
+//variable for the newly created list items
+var li = document.createElement("li");
+//variable array to store several songs locally
+var setList = [];
 
-
-//function pulls most recent song info from local storage populated by home page search, and sets the text of the li in the set-list ul to the song info string
+//upon button click, function adds most recent song info key as a set-list entry
 function addToSetList() {
-    var setListSong = localStorage.getItem("song info");
-//checks to see if song info is available in local storage
-    if (!setListSong) {
+        //checks to see if song info is available in local storage
+    if (songEntry === null) {
         return;
-
     } else {
-//if song info is available, stores variable to create an h2
-        var setlistHeading = document.createElement("h2");
-      
-//stores a variable to create an ul
-        var list = document.createElement("ul");
-//stores a variable to create an li
-        var listItem = document.createElement("li");
-//sets text of h2 to "Your Karaoke Set-List"
-        setlistHeading.textContent = "Your Karaoke Set-List"
-//sets the text of the li to "song info" pulled from local storage
-        listItem.textContent = setListSong;
-
-//appends h2 to section
-        document.getElementById("paper-set-list").appendChild(setlistHeading);
-//appends the ul to section
-        document.getElementById("paper-set-list").appendChild(list);
-//appends the li to the ul
-        document.getElementById("paper-set-list").appendChild(listItem);
-        //document.body.section.ul.appendChild(li);
-        //document.body.section.ul.li.appendChild(span);
+        for (var i = 0; i <= 8; i++) {
+            var songEntry = setList[i];
+        //creates an li 
+        li.document.createElement("li");
+        //sets the text of the li to "song info" pulled from local storage
+        li.textContent = songEntry;
+        li.setAttribute("data-index", i);
+        //appends the li to the ul
+        setListUl.appendChild(li);
     }
-
 }
 
-addToSetlistButton.addEventListener("click", function(event) {
-    event.preventDefault();
+function localparse() {
+    var storedSongs = JSON.parse(localStorage.getItem("setList"));
+
+    if (storedSongs !== null) {
+        setList = storedSongs;
+    }
 
     addToSetList();
-})
+}
 
+function storeSongs() {
+    localStorage.setItem("setList", JSON.stringify(setList));
+}
+
+localparse()
+}
