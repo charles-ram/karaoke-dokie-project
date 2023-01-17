@@ -9,10 +9,12 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<!-- maybe font link -->
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<script src="https://kit.fontawesome.com/240a9fc671.js" crossorigin="anonymous"></script>
 	<title>Karaoke Dokie</title>
 </head>
 
-<body class="custom-bg-class">
+<body class="custom-bg-class h-screen relative">
+
 	<header class="h-16 bg-zinc-700 fit">
 		<!-- css framework nav bar -->
 		<nav class="flex h-16 justify-end p-1">
@@ -25,10 +27,12 @@
 		</nav>
 		<!-- setlist & home-->
 	</header>
+
 	<div class="flex items-center justify-center pt-10 w-100">
 		<!-- title and description, eventually need image instead of h1 -->
 		<img class="px-8 py-2 w-3/5" src="./assets/images/karaoke-dokie-title-image.png">
 	</div>
+
 	<div class="flex w-100 justify-center m-4">
 		<p class="w-100 text-center m-1">Want to sing along?</p>
 		<p class="w-100 text-center m-1">
@@ -37,6 +41,7 @@
 			<span class="text-blue-300 font-bold">Save them for later</span>
 		</p>
 	</div>
+
 	<div class="mx-48 mt-15">
 		<!-- <form>Search Bar</form> -->
 		<form>
@@ -50,17 +55,26 @@
 			</div>
 		</form>
 	</div>
-	<div class="">
+
+	<div>
 		<ul id="resultList" class="custom-bg-class justify-center text-center w-100">
 			<!-- search results populate here -->
 			<!-- add the tailwind to the class here -->
 		</ul>
 	</div>
-        <footer>
-            <!-- maybe a couple links, github perhaps -->
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="https://apis.google.com/js/api.js"></script>
-        <script src="./assets/js/script.js"></script>
-    </body>
+
+	<footer class="fixed bottom-0 left-0 right-0">
+		<div class="flex justify-center" id="social-links">
+			<ul class="list-none text-center m-2">
+				<li class="inline-block mx-2"><i class="fa-brands fa-github"></i>   <a class="anchor-tag-style" href="https://github.com/NTumminaro">Nick Tumminaro</a></li>
+				<li class="inline-block mx-2"><i class="fa-brands fa-github"></i>   <a class="anchor-tag-style" href="https://github.com/charles-ram">Charles Ram</a></li>
+				<li class="inline-block mx-2"><i class="fa-brands fa-github"></i>   <a class="anchor-tag-style" href="https://github.com/anuffisenough">Chris Uffman</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://apis.google.com/js/api.js"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
 </html>
