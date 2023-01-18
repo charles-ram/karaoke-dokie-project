@@ -11,34 +11,34 @@ var setList = [];
 
 //upon button click, function adds most recent song info key as a set-list entry
 function addToSetList() {
-        //checks to see if song info is available in local storage
-    if (songEntry === null) {
-        return;
-    } else {
-        for (var i = 0; i <= 8; i++) {
-            var songEntry = setList[i];
-        //creates an li 
-        li.document.createElement("li");
-        //sets the text of the li to "song info" pulled from local storage
-        li.textContent = songEntry;
-        li.setAttribute("data-index", i);
-        //appends the li to the ul
-        setListUl.appendChild(li);
-    }
+		//checks to see if song info is available in local storage
+	if (songEntry === null) {
+		return;
+	} else {
+		for (var i = 0; i <= 8; i++) {
+			var songEntry = setList[i];
+		//creates an li
+		li.document.createElement("li");
+		//sets the text of the li to "song info" pulled from local storage
+		li.textContent = songEntry;
+		li.setAttribute("data-index", i);
+		//appends the li to the ul
+		setListUl.appendChild(li);
+	}
 }
 
 function localparse() {
-    var storedSongs = JSON.parse(localStorage.getItem("setList"));
+	var storedSongs = JSON.parse(localStorage.getItem("setList"));
 
-    if (storedSongs !== null) {
-        setList = storedSongs;
-    }
+	if (storedSongs !== null) {
+		setList = storedSongs;
+	}
 
-    addToSetList();
+	addToSetList();
 }
 
 function storeSongs() {
-    localStorage.setItem("setList", JSON.stringify(setList));
+	localStorage.setItem("setList", JSON.stringify(setList));
 }
 
 localparse()
