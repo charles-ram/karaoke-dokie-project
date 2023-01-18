@@ -11,10 +11,10 @@
 	<title>Karaoke Dokie - Video Page</title>
 </head>
 
-<body class="custom-bg-class h-fit">
+<body class="custom-bg-class text-center">
 
-	<header class="h-16 bg-zinc-700 fit">
-		<nav class="flex h-16 justify-end p-1">
+	<header class="bg-zinc-700 fit">
+		<nav class="flex justify-end p-1">
 			<div class="p-4">
 				<a class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="./index.html">Home</a>
 			</div>
@@ -24,29 +24,29 @@
 		</nav>
 	</header>
 
-	<div class="flex justify-center align-middle text-center items-center h-screen m-6 mt-10">
-		<div class="max-w-fit bg-zinc-700 rounded-lg m-2" id="left-col">
+	<div class="flex justify-center content-center align-middle mt-10">
+		<div class="w-4/5 bg-zinc-700 rounded-lg justify-center">
 			<div class="w-full flex justify-end">
 				<button type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
 			</div>
-			<div class="p-6 bg-zinc-700 rounded-lg m-3" id="youtube-iframe">
+			<div class="p-6 bg-zinc-700 rounded-lg m-3 flex justify-center" id="youtube-iframe">
 				<!-- There is some issue with local server and showing the youtube video, however the link and the embed are correct, its just freaking out -->
 				<!-- <iframe id="vid" width="640" height="385" src="" -->
-				<iframe class="w-full aspect-video mx-auto" id="vid" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe class="md:w-4/12 aspect-video" id="vid" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
-			<div class="w-100 text-4xl p-6" id="song-name">
+			<div class="w-full text-4xl p-6" id="song-name">
 				<h1>Song</h1>
 			</div>
-			<div class="w-100 text-2xl" id="artist-name">
+			<div class="w-full text-2xl m-2" id="artist-name">
 				<h1>Artist</h1>
 			</div>
-			<div class="p-7 justify-center">
+			<div class="mb-6">
 				<p>Song lyrics will go in here. This is where the lyrics will generate and live. The words for the song we select from the main screen will show up here. This area will contain the word content of the song we search if it contains any words at all.</p>
 			</div>
 		</div>
 	</div>
 
-	<footer class="relative bottom-0 left-0 right-0">
+	<footer class="relative bottom-0 left-0 right-0 mt-10">
 		<div class="flex justify-center" id="social-links">
 			<ul class="list-none text-center m-2">
 				<li class="inline-block mx-2"><i class="fa-brands fa-github"></i>   <a class="anchor-tag-style" href="https://github.com/NTumminaro">Nick Tumminaro</a></li>
