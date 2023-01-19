@@ -56,7 +56,7 @@ $("#sButton").click(function(e) {
 	"url": shazamUrl,
 	"method": "GET",
 	"headers": {
-		"X-RapidAPI-Key": "a4a48f36c2msh7ff5bd3d41db982p1e4bf2jsnde8ccd053f94",
+		"X-RapidAPI-Key": "654f2c0fddmsh3a2ffb1545d6690p1048aejsn5de087a4549a",
 		"X-RapidAPI-Host": "shazam.p.rapidapi.com"
 	}
 };
