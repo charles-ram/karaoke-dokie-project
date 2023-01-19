@@ -23,18 +23,18 @@ var setList = [];
 
 //function to add new song to locally-stored object (in progress)
 function addToSetList() {
-    // Render a new li for each todo
-    if (songEntry !== null) {
-    for (var i = 0; i <= 8; i++) {
-      setList[i] = songEntry;
-    };
+	// Render a new li for each todo
+	if (songEntry !== null) {
+	for (var i = 0; i <= 8; i++) {
+		setList[i] = songEntry;
+	};
 
-    localStorage.setItem("setList", JSON.stringify(setList));
-  };
+	localStorage.setItem("setList", JSON.stringify(setList));
+	};
 }
 
 //event listener for "Add to Set-List" button to call addToSetList function
 addToSetlistButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    addToSetList()
+	event.preventDefault();
+	addToSetList()
 });
