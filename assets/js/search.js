@@ -25,8 +25,6 @@ function addToSetList() {
 		setList.push(songInfo);
 		var setListString = JSON.stringify(setList);
 		localStorage.setItem("saved setList", setListString);
-	} else {
-		console.log("Too Many Songs!");
 	}
 };
 	//event listener for "Add to Set-List" button to call addToSetList function
