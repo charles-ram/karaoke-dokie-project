@@ -1,5 +1,5 @@
 .custom-bg-class {
-	background-image: url(https://cdn.pixabay.com/photo/2017/08/01/21/02/people-2567965_960_720.jpg);
+	background-image: url(/assets/images/setlist-wooden-background-img.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #e4e6eb;
@@ -7,12 +7,11 @@
 
 section {
 	font-family: 'Nanum Pen Script', cursive;
-	background-image: url(https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-147801.jpg?w=1380&t=st=1673570375~exp=1673570975~hmac=2473239f29e726ab4eaec36a16b29b41f14732476a40f81a1e97429a68f002f3);
-	display: inline-block;
-	width: 500px;
-	height: 800px;
-	position: relative;
-	color: black
+	color: black;
+	background-image: url(/assets/images/Paper.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 h2 {
@@ -23,4 +22,12 @@ h2 {
 li {
 	color: black;
 	font-style: italic;
+}
+
+li button {
+	margin-left: 1rem;
+	padding-left: 3px;
+	padding-right: 3px ;
+	border: solid black;
+	border-radius: 5px;
 }
