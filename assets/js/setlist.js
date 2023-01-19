@@ -1,48 +1,46 @@
-//Creates functionality for button-click on youtube page adding song information to set-list page, maybe add function on search button that adds song info locally, to be retrieved by the "add song" button on youtube page
+//Populates paper set-list upon page load, allows users to click and remove songs from their set-list
 
 //variable for ul element selector
-var setListUl = document.getElementById("set-list")
-//variable for the locally-stored song info string
-//variable for the newly created list items
-
-//variable array to store several songs locally
-//var setList = [];
-
+var setListUl = document.getElementById("set-list");
+//stores parsed set-list saved from Search page functions
 var localSetList = JSON.parse(localStorage.getItem("saved setList"));
 
+//defines the function to create and print set-list from local storage, adds button for editing purposes, prints to paper div
 function printToSetList() {
-		//checks to see if song info is available in local storage
-	//if (localSetList === null) {
-        //console.log("You need to add songs!");
-    //} else {
-		for (var i = 0; i < localSetList.length; i++) {
-		
-        var songEntry = localSetList[i];
-        var li = document.createElement("li");
-        li.textContent = songEntry;
-        li.setAttribute("data-index", i);
-
-        var button = document.createElement("button");
-        button.textContent = " X Remove Song";
-
-        li.appendChild(button);
-        setListUl.appendChild(li);
+	for (var i = 0; i < localSetList.length; i++) {
+		var songEntry = localSetList[i];
+		var li = document.createElement("li");
+	//generates text for each li using song entry info from local storage
+		li.textContent = songEntry;
+		li.setAttribute("data-index", i);
+	//creates "Remove Song" button
+		var button = document.createElement("button");
+		button.textContent = " Remove Song";
+	//appends song entry and button to the ul
+		li.appendChild(button);
+		setListUl.appendChild(li);
 	}
 }
 
+//adds event listener and function for the click of "Remove Song" buttons
 setListUl.addEventListener("click", function(event) {
-  var element = event.target;
+	var element = event.target;
+	var listItems = $("li");
 
-  // Checks if element is a button
-  if (element.matches("button") === true) {
-    // Get its data-index value and remove the todo element from the list
-    var index = element.parentElement.getAttribute("data-index");
-    localSetList.splice(index, 1);
-
-    // Store updated todos in localStorage, re-render the list
-    printToSetList();
-    renderTodos();
-  }
+	if (element.matches("button") === true) {
+		var index = element.parentElement.getAttribute("data-index");
+	//removes the song from the saved set-list
+		localSetList.splice(index, 1);
+	//saves the newly edited set list
+		var editedSetList = localSetList;
+	//sets local storage to new set list
+		localStorage.setItem("saved setList", JSON.stringify(editedSetList));
+	//removes previously printed set list
+		listItems.remove();
+	//prints newly edited set list to paper div
+		printToSetList();
+	}
 });
 
+//calls printTSetList function
 printToSetList();

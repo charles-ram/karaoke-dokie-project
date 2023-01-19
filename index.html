@@ -5,12 +5,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<!-- link stylesheet here -->
+	<!-- Tailwind framework -->
 	<script src="https://cdn.tailwindcss.com"></script>
-	<!-- maybe font link -->
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<!-- font link -->
 	<script src="https://kit.fontawesome.com/240a9fc671.js" crossorigin="anonymous"></script>
 	<title>Karaoke Dokie</title>
+	<!-- tab icon -->
+	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 </head>
 
 <body class="custom-bg-class h-screen relative">
@@ -18,21 +20,21 @@
 	<header class="h-16 bg-zinc-700 fit">
 		<!-- css framework nav bar -->
 		<nav class="flex h-16 justify-end p-1">
+			<!-- setlist & home-->
 			<div class="p-4">
 				<a class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="#">Home</a>
 			</div>
 			<div class="p-4">
-				<a class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="./setlist.html">Set List</a>
+				<a class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="./setlist.html">Set-List</a>
 			</div>
 		</nav>
-		<!-- setlist & home-->
 	</header>
 
 	<div class="flex items-center justify-center pt-10 w-100">
-		<!-- title and description, eventually need image instead of h1 -->
+		<!-- Title image -->
 		<img class="px-8 py-2 w-3/5" src="./assets/images/karaoke-dokie-title-image.png">
 	</div>
-
+	<!-- description -->
 	<div class="flex w-100 justify-center m-4">
 		<p class="w-100 text-center m-1">Want to sing along?</p>
 		<p class="w-100 text-center m-1">
@@ -41,9 +43,8 @@
 			<span class="text-blue-400 font-bold">Save them for later</span>
 		</p>
 	</div>
-
+	<!-- Search Bar -->
 	<div class="md:mx-48 mt-15 sm:min-w-max">
-		<!-- <form>Search Bar</form> -->
 		<form>
 			<label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
 			<div class="relative">
@@ -57,12 +58,12 @@
 	</div>
 
 	<div>
+		<!-- search results -->
 		<ul id="resultList" class="custom-bg-class justify-center text-center w-100">
 			<!-- search results populate here -->
-			<!-- add the tailwind to the class here -->
 		</ul>
 	</div>
-
+	<!-- links to our githubs -->
 	<footer class="fixed bottom-0 left-0 right-0">
 		<div class="flex justify-center" id="social-links">
 			<ul class="list-none text-center m-2">
@@ -72,7 +73,7 @@
 			</ul>
 		</div>
 	</footer>
-
+	<!-- script links with google api and jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="https://apis.google.com/js/api.js"></script>
 	<script src="./assets/js/script.js"></script>
