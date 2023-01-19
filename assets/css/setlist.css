@@ -8,10 +8,6 @@
 section {
 	font-family: 'Nanum Pen Script', cursive;
 	background-image: url(https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-147801.jpg?w=1380&t=st=1673570375~exp=1673570975~hmac=2473239f29e726ab4eaec36a16b29b41f14732476a40f81a1e97429a68f002f3);
-	display: inline-block;
-	width: 500px;
-	height: 800px;
-	position: relative;
 	color: black
 }
 

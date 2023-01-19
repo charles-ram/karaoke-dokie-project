@@ -13,7 +13,7 @@
 	<title>Your Set-List</title>
 </head>
 
-<body class="custom-bg-class">
+<body class="custom-bg-class parent-div">
 	<header class="h-16 bg-zinc-700 fit">
 		<nav class="flex h-16 justify-end p-1">
 			<div class="p-4">
@@ -25,9 +25,9 @@
 		</nav>
 	</header>
 
-	<section id="paper-set-list">
-		<h2>Your Karaoke Set-List</h2>
-		<ul id="set-list"></ul>
+	<section id="paper-set-list" class="w-8/12 h-full child-div flex flex-col text-center">
+		<h2 class="w-full justify-center">Your Karaoke Set-List</h2>
+		<ul id="set-list" class="w-full p-4"></ul>
 	</section>
 
 	<script src="./assets/js/setlist.js"></script>
