@@ -3,43 +3,32 @@
 //variable for ul element selector
 var setListUl = document.getElementById("set-list")
 //variable for the locally-stored song info string
-var songEntry = localStorage.getItem("song info");
 //variable for the newly created list items
 var li = document.createElement("li");
 //variable array to store several songs locally
-var setList = [];
+//var setList = [];
 
-//upon button click, function adds most recent song info key as a set-list entry
-function addToSetList() {
+var localSetList = JSON.parse(localStorage.getItem("saved setList"));
+
+function printToSetList() {
 		//checks to see if song info is available in local storage
-	if (songEntry === null) {
-		return;
-	} else {
-		for (var i = 0; i <= 8; i++) {
-			var songEntry = setList[i];
-		//creates an li
-		li.document.createElement("li");
-		//sets the text of the li to "song info" pulled from local storage
-		li.textContent = songEntry;
-		li.setAttribute("data-index", i);
-		//appends the li to the ul
-		setListUl.appendChild(li);
-	}
+	if (localSetList === null) {
+        console.log("You need to add songs!");
+    } else {
+		for (var i = 0; i < localSetList.length; i++) {
+		var songEntry = localSetList[i];
+       
+        li.textContent = songEntry;
+        li.setAttribute("data-index", i);
+
+        var button = document.createElement("button");
+        button.textContent = " X Remove Song";
+
+        li.appendChild(button);
+        setListUl.appendChild(li);
+        return;
+	};
+}
 }
 
-function localparse() {
-	var storedSongs = JSON.parse(localStorage.getItem("setList"));
-
-	if (storedSongs !== null) {
-		setList = storedSongs;
-	}
-
-	addToSetList();
-}
-
-function storeSongs() {
-	localStorage.setItem("setList", JSON.stringify(setList));
-}
-
-localparse()
-}
+printToSetList();
