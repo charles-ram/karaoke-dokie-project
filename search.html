@@ -27,7 +27,10 @@
 	<div class="flex justify-center content-center align-middle mt-10">
 		<div class="w-4/5 bg-zinc-700 rounded-lg justify-center">
 			<div class="w-full flex justify-end">
-				<button type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
+				<button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
+				<div id="tooltip-click" role="tooltip" class="absolute hidden z-10 inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 tooltip dark:bg-gray-700">
+					Added to setlist
+				</div>
 			</div>
 			<div class="bg-zinc-700 rounded-lg flex justify-center" id="youtube-iframe">
 				<!-- There is some issue with local server and showing the youtube video, however the link and the embed are correct, its just freaking out -->
