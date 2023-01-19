@@ -1,26 +1,29 @@
 .custom-bg-class {
-	background-image: url(https://cdn.pixabay.com/photo/2017/08/01/21/02/people-2567965_960_720.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	color: #e4e6eb;
 }
 
 section {
+	padding-left: 800px;
 	font-family: 'Nanum Pen Script', cursive;
-	background-image: url(https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-147801.jpg?w=1380&t=st=1673570375~exp=1673570975~hmac=2473239f29e726ab4eaec36a16b29b41f14732476a40f81a1e97429a68f002f3);
-	display: inline-block;
-	width: 500px;
-	height: 800px;
-	position: relative;
-	color: black
 }
 
 h2 {
-	color: black;
-	font-style: italic;
+	margin: 10px;
+}
+
+ul {
+
+
 }
 
 li {
+	font-size: 25px;
+	font-weight: bold;
 	color: black;
 	font-style: italic;
+	margin: 10px;
 }
+
+button {
+	margin-left: 50px;
+	border:  1px solid black
+	}

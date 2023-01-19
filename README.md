@@ -22,6 +22,8 @@ The Karaoke Dokie application allows karaoke singers (Users) to search for songs
 
 [Tailwind-CSS-Documentation](https://tailwindcss.com/docs/installation)
 
+[MDN-Web-Docs](https://developer.mozilla.org/en-US/)
+
 
 <!--General Format, as above [Description of resource and how it was used](Resource Link)-->
 
