@@ -16,21 +16,38 @@ $("#artist-name").text(songArtist);
 var setList = [];
 //function to add new song to locally-stored object (in progress)
 function addToSetList() {
-    if (localStorage.getItem("saved setList") === null){
-        var setListString = JSON.stringify(setList);
-        localStorage.setItem("saved setList", setListString);
-    };
-    setList = JSON.parse(localStorage.getItem("saved setList"));
-    if (setList.length <= 7) {
-        setList.push(songInfo);
-        var setListString = JSON.stringify(setList);
-        localStorage.setItem("saved setList", setListString);
-    } else {
-        console.log("Too Many Songs!");
-    }
+	if (localStorage.getItem("saved setList") === null){
+		var setListString = JSON.stringify(setList);
+		localStorage.setItem("saved setList", setListString);
+	};
+	setList = JSON.parse(localStorage.getItem("saved setList"));
+	if (setList.length <= 7) {
+		setList.push(songInfo);
+		var setListString = JSON.stringify(setList);
+		localStorage.setItem("saved setList", setListString);
+	} else {
+		console.log("Too Many Songs!");
+	}
 };
-  //event listener for "Add to Set-List" button to call addToSetList function
-  addToSetlistButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    addToSetList()
-  });
+	//event listener for "Add to Set-List" button to call addToSetList function
+	addToSetlistButton.addEventListener("click", function(event) {
+	event.preventDefault();
+	addToSetList();
+	tooltipFadeIn();
+	tooltipFadeOut();
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Tooltip toggle hidden class////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Function to fade tooltip in
+function tooltipFadeIn() {
+	$("#tooltip-click").fadeIn();
+}
+// Function to fade tooltip out
+function tooltipFadeOut() {
+	setTimeout(function(){
+		$("#tooltip-click").fadeOut();
+	}, 2000);
+}

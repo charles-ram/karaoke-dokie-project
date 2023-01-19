@@ -27,12 +27,15 @@
 	<div class="flex justify-center content-center align-middle mt-10">
 		<div class="w-4/5 bg-zinc-700 rounded-lg justify-center">
 			<div class="w-full flex justify-end">
-				<button type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
+				<button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="submit" id="addToSetlistButton" class="m-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to Set-List</button>
+				<div id="tooltip-click" role="tooltip" class="absolute hidden z-10 inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 tooltip dark:bg-gray-700">
+					Added to setlist
+				</div>
 			</div>
 			<div class="bg-zinc-700 rounded-lg flex justify-center" id="youtube-iframe">
 				<!-- There is some issue with local server and showing the youtube video, however the link and the embed are correct, its just freaking out -->
 				<!-- <iframe id="vid" width="640" height="385" src="" -->
-				<iframe class="md:w-4/12 aspect-video" id="vid" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<iframe class="md:w-5/12 aspect-video" id="vid" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 			<div class="w-full text-4xl p-6" id="song-name">
 				<h1>Song</h1>
@@ -40,13 +43,13 @@
 			<div class="w-full text-2xl m-2" id="artist-name">
 				<h1>Artist</h1>
 			</div>
-			<div class="mb-6 px-40">
+			<div class="mb-6 px-24">
 				<p>Song lyrics will go in here. This is where the lyrics will generate and live. The words for the song we select from the main screen will show up here. This area will contain the word content of the song we search if it contains any words at all.</p>
 			</div>
 		</div>
 	</div>
 
-	<footer class="absolute bottom-0 left-0 right-0">
+	<footer class="absolute bottom-0 left-0 right-0 mt-1">
 		<div class="flex justify-center" id="social-links">
 			<ul class="list-none text-center m-2">
 				<li class="inline-block mx-2"><i class="fa-brands fa-github"></i>   <a class="anchor-tag-style" href="https://github.com/NTumminaro">Nick Tumminaro</a></li>
@@ -58,6 +61,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="./assets/js/search.js"></script>
+
 </body>
 
 </html>
