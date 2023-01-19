@@ -65,19 +65,25 @@ $("#sButton").click(function(e) {
 	$.ajax(settings).done(function (response) {
 	// removes the loading icon
 	$("li").remove();
+	console.log(response);
+	// console.log(response.tracks.hits.length)
+	if (response && Object.keys(response).length === 0) {
+		$("#resultList").append('<li><h2><i>No Results could be found, try different lyrics</i></h2></li>');
+		(console.log("we made it here"));
+	} else {
 	// for each search result, return the song, its artist, and a snippet of the lyrics if theyre avaliable
-	for (i = 0; i < response.tracks.hits.length; i++) {
-		var songTitle = response.tracks.hits[i].track.title;
-		var artist = response.tracks.hits[i].track.subtitle;
-		// var songSnip = response.tracks.hits[i].snippet;
-		// // sets dialog to appear if no snippet of song lyrics are present
-		// if (songSnip === undefined) {
-		//   songSnip = "<i>Lyrics currently unavailable</i>"
-		// };
-		// Charles add the class's here for the css framework
-		// I'm aware of how ugly this is, but I cannot get it to work otherwise
-		$("#resultList").append('<li id="newPageLink" class="block list-none"><button id="buttonCheck" class="m-3 text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-700 font-medium rounded-lg text-sm px-4 py-2 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"><h2>' + songTitle + ' by ' + artist + '</h2></button></li>');
-		};
+		for (i = 0; i < response.tracks.hits.length; i++) {
+			var songTitle = response.tracks.hits[i].track.title;
+			var artist = response.tracks.hits[i].track.subtitle;
+			// var songSnip = response.tracks.hits[i].snippet;
+			// // sets dialog to appear if no snippet of song lyrics are present
+			// if (songSnip === undefined) {
+			//   songSnip = "<i>Lyrics currently unavailable</i>"
+			// };
+			// Charles add the class's here for the css framework
+			// I'm aware of how ugly this is, but I cannot get it to work otherwise
+			$("#resultList").append('<li id="newPageLink" class="block list-none"><button id="buttonCheck" class="m-3 text-white hover:bg-zinc-700 focus:ring-4 focus:outline-none focus:ring-zinc-700 font-medium rounded-lg text-sm px-4 py-2 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:ring-zinc-700"><h2>' + songTitle + ' by ' + artist + '</h2></button></li>');
+			}};
 	});
 });
 
