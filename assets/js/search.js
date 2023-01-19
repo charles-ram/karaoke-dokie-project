@@ -25,16 +25,22 @@ $("#artist-name").text(songArtist);
 var setList = [];
 //function to add new song to locally-stored object
 function addToSetList() {
+	// if there is no set-list, create one
 	if (localStorage.getItem("saved setList") === null){
 		var setListString = JSON.stringify(setList);
 		localStorage.setItem("saved setList", setListString);
 	};
+	// if there is a set-list, or if one is created, parse it here
 	setList = JSON.parse(localStorage.getItem("saved setList"));
+	// sets maximum length of set-list to 8 songs
 	if (setList.length <= 7) {
 		setList.push(songInfo);
 		var setListString = JSON.stringify(setList);
 		localStorage.setItem("saved setList", setListString);
-	} 
+	// if the set-list is full, change to tooltip to reflect
+	} else {
+		$("#tooltip-click").text("Your set-list is full!");
+	}
 };
 
 // event listener for "Add to Set-List" button to call addToSetList function
