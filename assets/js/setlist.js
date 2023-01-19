@@ -4,7 +4,7 @@
 var setListUl = document.getElementById("set-list")
 //variable for the locally-stored song info string
 //variable for the newly created list items
-var li = document.createElement("li");
+
 //variable array to store several songs locally
 //var setList = [];
 
@@ -12,12 +12,13 @@ var localSetList = JSON.parse(localStorage.getItem("saved setList"));
 
 function printToSetList() {
 		//checks to see if song info is available in local storage
-	if (localSetList === null) {
-        console.log("You need to add songs!");
-    } else {
+	//if (localSetList === null) {
+        //console.log("You need to add songs!");
+    //} else {
 		for (var i = 0; i < localSetList.length; i++) {
-		var songEntry = localSetList[i];
-       
+		
+        var songEntry = localSetList[i];
+        var li = document.createElement("li");
         li.textContent = songEntry;
         li.setAttribute("data-index", i);
 
@@ -26,9 +27,8 @@ function printToSetList() {
 
         li.appendChild(button);
         setListUl.appendChild(li);
-        return;
-	};
+	}
 }
-}
+
 
 printToSetList();
