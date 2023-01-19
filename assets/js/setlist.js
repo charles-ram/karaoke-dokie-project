@@ -15,7 +15,7 @@ function printToSetList() {
 		li.setAttribute("data-index", i);
 	//creates "Remove Song" button
 		var button = document.createElement("button");
-		button.textContent = " Remove Song";
+		button.textContent = "Remove Song";
 	//appends song entry and button to the ul
 		li.appendChild(button);
 		setListUl.appendChild(li);

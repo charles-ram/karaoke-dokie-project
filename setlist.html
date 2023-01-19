@@ -14,7 +14,7 @@
 	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 </head>
 
-<body class="custom-bg-class parent-div">
+<body class="custom-bg-class justify-center">
 	<header class="h-16 bg-zinc-700 fit">
 		<nav class="flex h-16 justify-end p-1">
 			<div class="p-4">
@@ -26,10 +26,12 @@
 		</nav>
 	</header>
 
-	<section id="paper-set-list" class="w-8/12 h-full child-div flex flex-col text-center">
-		<h2 class="w-full justify-center">Your Karaoke Set-List</h2>
-		<ul id="set-list" class="w-full p-4"></ul>
-	</section>
+	<div class="flex w-full justify-center">
+		<section id="paper-set-list" class="w-5/12 min-h-screen flex flex-col text-center">
+			<h2 class="w-full justify-center text-4xl pt-16">Your Karaoke Set-List</h2>
+			<ul id="set-list" class="w-full p-4"></ul>
+		</section>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="./assets/js/setlist.js"></script>
