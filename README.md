@@ -13,6 +13,7 @@ The Karaoke Dokie application allows karaoke singers (Users) to search for songs
 ## Usage
 
 [GitHub-Pages](https://github.com/charles-ram/karaoke-dokie-project)
+[Active-Site](https://charles-ram.github.io/karaoke-dokie-project/)
 
 ## Screenshot
 
