@@ -2,32 +2,48 @@
 
 ## Description
 
-The Karaoke Dokie application allows karaoke singers (Users) to search for songs, review accompanying videos, and add preferred songs to a stored set-list for future karaoke use. This application was made using an external CSS framework, with web-based API, third-party API, and server-side API for functionality.
+-The "Karaoke Dokie" application allows karaoke singers (Users) to search for songs, review accompanying videos, and add preferred songs to a stored set-list for future karaoke use. This application was made using an external CSS framework, with web-based API, third-party API, and server-side API for functionality.
 
--This application allows Users to conduct song searches using artist, title, or sample song lyrics. Using Shazaam API, the application returns a list of possible song matches, displaying the song artist, title, and sample lyrics. 
+-This application allows Users to conduct song searches using artist, title, or sample song lyrics. Using Shazam API, the application returns a list of possible song matches, displaying the song artist, title, and sample lyrics. 
 
--The User can then click one of the possible song matches to load a second page where they can watch and/or listen to a corresponding video, populated using YouTube API. 
+-The User can then click one of the possible song matches to load a second page where they can watch and/or listen to a corresponding video, generated using YouTube API. 
 
--If Users would like to remember the song for future performances, they can add it to their locally-stored "Set-List," which is visible on a third page. The generated set-list allows them to edit and update their set-list as needed.
+-If Users would like to remember the song for future performances, they can add it to their locally-stored "Set-List," which is printed to a third page. The rendered set-list allows Users to edit and update their set-list as needed.
 
 ## Usage
 
-[GitHub-Pages](https://github.com/charles-ram/karaoke-dokie-project)
-[Active-Site](https://charles-ram.github.io/karaoke-dokie-project/)
+Application is deployed live at the following link:
 
-## Screenshot
+[GitHub Pages](https://charles-ram.github.io/karaoke-dokie-project/)
 
-<!--Screenshots of each page-->
+## Page Screenshots
+
+[Home Page Screenshot](assets/images/KaraokeDokieHomeSearch.png)
+
+[Search Page Screenshot](assets/images/KaraokeDokieSearchpage.png)
+
+[Set List-Page Screenshot](assets/images/KaraokeDokieSetListpage.png)
 
 ## Credits
 
-[Tailwind-CSS-Documentation](https://tailwindcss.com/docs/installation)
+[Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
 
+[Flowbite Tailwind Component Library](https://flowbite.com/docs/getting-started/introduction/)
 
-<!--General Format, as above [Description of resource and how it was used](Resource Link)-->
+[Font Awesome Library](https://fontawesome.com/)
 
+[Google Fonts API Documentation](https://developers.google.com/fonts)
 
-<!--APIs used-->
+[Shazam API Documentation](https://rapidapi.com/apidojo/api/shazam)
 
-<!--Be sure to keep track of reference material other than API, so that we can give credit. Better to over-cite than under-->
+[YouTube API Documentation](https://developers.google.com/youtube/v3)
 
+[jQuery Documentation](https://jquery.com/)
+
+[MDN Documentation](https://developer.mozilla.org/en-US/)
+
+[Pencil Image Source](https://www.freeiconspng.com/img/645)
+
+[Fender Pic Image Source](https://commons.wikimedia.org/wiki/File:Fender_Guitar_pick_01.png)
+
+[Paper Set-List Image Source](https://ar.pinterest.com/pin/518336238368304497/)
