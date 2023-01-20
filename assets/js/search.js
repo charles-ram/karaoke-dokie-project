@@ -39,7 +39,7 @@ function addToSetList() {
 		localStorage.setItem("saved setList", setListString);
 	// if the set-list is full, change to tooltip to reflect
 	} else {
-		$("#tooltip-click").text("Your set-list is full!");
+		$("#tooltip-click").text("Your Set-List is full!");
 	}
 };
 
